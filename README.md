@@ -4,6 +4,8 @@ Clone of SimpleTable template that a dynamic title to display list length.
 
 :warning: Android only
 
+⁉️ not tested yet
+
 ## how it work
 
 use a table label with `%length%`
