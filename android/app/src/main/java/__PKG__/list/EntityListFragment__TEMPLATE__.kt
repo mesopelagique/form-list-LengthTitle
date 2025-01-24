@@ -18,19 +18,16 @@ import com.qmobile.qmobileui.ui.setupToolbarTitle
 class EntityListFragment{{tableName}}(private val binding: ViewDataBinding) : CustomEntityListFragment {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        val fragment = view.findFragment<EntityListFragment>() // the caller
-        var title = fragment.arguments?.getString("navbarTitle")?: ""
-
-        if (!title.contains("%length%")) {
-            return
-        }
-        val listData = (binding as? FragmentListBinding)?.viewModel?.dao?.getAll()
-        listData?.observe(fragment.viewLifecycleOwner) {
-            val count = it.count()
-            fragment.activity?.setupToolbarTitle(title.replace("%length%", " $count"))
-        }
-        val count = listData?.value?.count() ?: 0
-        fragment.activity?.setupToolbarTitle(title.replace("%length%", " $count"))
+       val fragment = view.findFragment<EntityListFragment>() // the caller
+       var title = fragment.arguments?.getString("navbarTitle")?: ""
+    
+       val listData = (binding as? FragmentListBinding)?.viewModel?.dao?.getAll()
+       listData?.observe(fragment.viewLifecycleOwner) {
+           val count = it.count()
+           fragment.activity?.setupToolbarTitle("$title $count")
+       }
+       val count = listData?.value?.count() ?: 0
+       fragment.activity?.setupToolbarTitle("$title $count")
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
