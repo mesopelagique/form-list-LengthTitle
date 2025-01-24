@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardcodedText">
+
+    <data>
+
+        <!--ENTITY_VARIABLE-->
+    </data>
+
+    <!-- Generated with list form template named "Length Title" -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <!-- START EDITING HERE -->
+
+        <TextView
+            android:id="@+id/___SPECIFIC_ID_1___"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:scrollbars="none"
+            android:text="___TEXT_1___"
+            android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+            android:textColor="?attr/colorPrimary"
+            app:layout_constraintBottom_toTopOf="@+id/___SPECIFIC_ID_2___"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="My field 1" />
+
+        <TextView
+            android:id="@+id/___SPECIFIC_ID_2___"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:scrollbars="none"
+            android:text="___TEXT_2___"
+            android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+            android:textColor="?attr/colorOnSurface"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/___SPECIFIC_ID_1___"
+            tools:text="My field 2" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="Chevron Image"
+            app:imageDrawable="@{@drawable/baseline_chevron_right_24}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="?attr/colorOnSurface"
+            tools:background="@drawable/baseline_chevron_right_24" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
